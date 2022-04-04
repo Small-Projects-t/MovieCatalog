@@ -4,8 +4,8 @@ import Button from '@mui/material/Button';
 import {Grid} from '@material-ui/core';
 import {Autocomplete, TextField, Typography} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchCountries} from "../redux/countryReducer";
-import {addMovie, editMovie} from "../redux/moviesReducer";
+import {fetchCountries} from "../redux/reducers/countryReducer";
+import {addMovie, editMovie} from "../redux/reducers/moviesReducer";
 import useStyles from '../styles/AddEditMovie.style';
 
 interface Props {

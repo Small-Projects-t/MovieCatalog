@@ -4,7 +4,7 @@ import TableBody from '@mui/material/TableBody';
 import EditIcon from '@mui/icons-material/Edit';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import {useDispatch, useSelector} from 'react-redux'
-import {fetchMovies} from "../redux/moviesReducer";
+import {fetchMovies} from "../redux/reducers/moviesReducer";
 import {AddEditMovie} from "./AddEditMovie";
 import useStyles from '../styles/MovieList.style';
 

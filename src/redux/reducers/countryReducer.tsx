@@ -1,4 +1,4 @@
-import MovieCatalogServices from "../services/MovieCatalogServices";
+import MovieCatalogServices from "../../services/MovieCatalogServices";
 
 const initialState: any = []
 export default function countryReducer(state = initialState, action: any) {
