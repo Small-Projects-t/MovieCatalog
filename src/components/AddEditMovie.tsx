@@ -13,7 +13,6 @@ interface Props {
     setIsAdding: React.Dispatch<React.SetStateAction<boolean>>;
     movieToEdit: any;
     isAdding: boolean;
-    isEditing: boolean;
 }
 
 interface countryProps {
@@ -22,7 +21,7 @@ interface countryProps {
     uuid: string
 }
 
-export const AddEditMovie: React.FC<Props> = ({setIsEditing, setIsAdding, movieToEdit, isAdding, isEditing}) => {
+export const AddEditMovie: React.FC<Props> = ({setIsEditing, setIsAdding, movieToEdit, isAdding}) => {
     const classes = useStyles();
     const [movieName, setMovieName] = useState<string>('');
     const [country, setCountry] = useState<countryProps>(isAdding ? {} : movieToEdit?.movieObj?.country ?? {});
@@ -91,7 +90,7 @@ export const AddEditMovie: React.FC<Props> = ({setIsEditing, setIsAdding, movieT
             open={open}
             onClose={() => setOpen(false)}
             onOpen={() => {
-                if(allCountries.length < 1){
+                if (allCountries.length < 1) {
                     dispatch(fetchCountries())
                 }
                 setOpen(true)
@@ -100,11 +99,13 @@ export const AddEditMovie: React.FC<Props> = ({setIsEditing, setIsAdding, movieT
                 dispatch(fetchCountries(value))
             }}*/
             renderInput={(params) => (
-                <TextField name={'countryUuid'} {...params} variant="outlined" onChange={(event: any) => {
+                <TextField name={'countryUuid'} {...params} variant="outlined"
+                    /*onChange={(event: any) => {
                     dispatch(fetchCountries(event.target.value))
-                }}/>
+                }}*/
+                />
             )}
-           /* onFocusCapture={() => dispatch(fetchCountries())}*/
+            /* onFocusCapture={() => dispatch(fetchCountries())}*/
             onChange={(event: SyntheticEvent<Element, Event>, value: string) => handleChange(event, value)}
             fullWidth
         />)

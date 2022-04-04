@@ -85,7 +85,7 @@ export const MovieList = () => {
         <Grid container item xs={12} className={classes.contentContainer}>
             {isEditing || isAdding ? (
                 <AddEditMovie setIsEditing={setIsEditing} setIsAdding={setIsAdding} movieToEdit={movieToEdit}
-                              isAdding={isAdding} isEditing={isEditing}/>) : (
+                              isAdding={isAdding} />) : (
 
                 <TableContainer className={classes.tableContainer}>
                     <Grid container item>
