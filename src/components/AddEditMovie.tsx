@@ -1,18 +1,12 @@
-import React, {ChangeEvent, SyntheticEvent, useEffect, useState} from "react";
+import React, {ChangeEvent, SyntheticEvent, useState} from "react";
 import InputLabel from '@mui/material/InputLabel';
 import Button from '@mui/material/Button';
 import {Grid} from '@material-ui/core';
-import {Autocomplete, IconButton, TextField, Typography} from "@mui/material";
+import {Autocomplete, TextField, Typography} from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchCountries} from "../redux/countryReducer";
 import {addMovie, editMovie} from "../redux/moviesReducer";
 import useStyles from '../styles/AddEditMovie.style';
-import MovieCatalogServices from "../services/MovieCatalogServices";
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-
-/*import MovieCatalogServices from "../services/MovieCatalogServices";
-
-import ArrowDropDownCircleIcon from '@mui/icons-material/ArrowDropDownCircle';*/
 
 interface Props {
     setIsEditing: React.Dispatch<React.SetStateAction<boolean>>;
@@ -102,7 +96,7 @@ export const AddEditMovie: React.FC<Props> = ({setIsEditing, setIsAdding, movieT
                 }
                 setOpen(true)
             }}
-           /* onInputChange={(event, value) => {
+            /*onInputChange={(event, value) => {
                 dispatch(fetchCountries(value))
             }}*/
             renderInput={(params) => (

@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
-import {Box, Grid, IconButton, Table, TableCell, TableContainer, TableHead, TableRow, Typography} from "@mui/material";
+import {Grid, IconButton, Table, TableCell, TableContainer, TableHead, TableRow, Typography} from "@mui/material";
 import TableBody from '@mui/material/TableBody';
 import EditIcon from '@mui/icons-material/Edit';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-import {useSelector, useDispatch} from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import {fetchMovies} from "../redux/moviesReducer";
 import {AddEditMovie} from "./AddEditMovie";
 import useStyles from '../styles/MovieList.style';
