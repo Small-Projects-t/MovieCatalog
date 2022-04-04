@@ -17,7 +17,7 @@ const remove = (id: any) => {
 };
 
 const getCounties= (keyword?: any) => {
-    return https.get(`/countries${keyword ? '?keyword=' + keyword : ''}`);
+    return https.get(`/countries?keyword=${keyword ? keyword : ''}`);
 };
 
 

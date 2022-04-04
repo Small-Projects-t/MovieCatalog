@@ -33,7 +33,7 @@ const headCells: readonly HeadCell[] = [
 export const MovieList = () => {
     const [isEditing, setIsEditing] = useState<boolean>(false);
     const [isAdding, setIsAdding] = useState<boolean>(false);
-    const [movieToEdit, setMovieToEdit] = useState<any>();
+    const [movieToEdit, setMovieToEdit] = useState<object>({});
     const classes = useStyles();
 
     const allMovies = useSelector((state: any) => state.movies);
@@ -82,13 +82,13 @@ export const MovieList = () => {
     }
 
     return (
-        <Grid container xs={12} className={classes.contentContainer}>
+        <Grid container item xs={12} className={classes.contentContainer}>
             {isEditing || isAdding ? (
                 <AddEditMovie setIsEditing={setIsEditing} setIsAdding={setIsAdding} movieToEdit={movieToEdit}
                               isAdding={isAdding} isEditing={isEditing}/>) : (
 
                 <TableContainer className={classes.tableContainer}>
-                    <Grid  container item>
+                    <Grid container item>
                         <Grid container item>
                             <Typography variant="h4" className={classes.headerText}>Movies</Typography>
                         </Grid>
